@@ -13,6 +13,7 @@ router.get("/", withAuth, (req, res) => {
 
       res.render("dashboard", {
         posts,
+        loggedIn: true
       });
     })
     .catch((err) => {
