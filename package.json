@@ -1,5 +1,5 @@
 {
-  "name": "CMS_Tech_Blog",
+  "name": "cms-tech-blog",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/nkirti28/CMS_Tech_Blog.git"
   },
-  "author": "Kirti S",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nkirti28/CMS_Tech_Blog/issues"
