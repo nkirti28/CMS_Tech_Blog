@@ -3,11 +3,12 @@ const signupFormHandler = async function (event) {
 
   const usernameEl = document.querySelector("#username-input-signup");
   const passwordEl = document.querySelector("#password-input-signup");
+
   fetch("/api/user", {
     method: "post",
     body: JSON.stringify({
-      username: usernameEl.value,
-      password: passwordEl.value,
+      username: usernameEl.value.trim(),
+      password: passwordEl.value.trim(),
     }),
     headers: { "Content-Type": "application/json" },
   })
@@ -18,5 +19,5 @@ const signupFormHandler = async function (event) {
 };
 
 document
-  .querySelector("#signup-btn")
+  .querySelector("#signup-form")
   .addEventListener("submit", signupFormHandler);

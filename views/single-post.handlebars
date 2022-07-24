@@ -1,13 +1,20 @@
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-    {{#each posts as |post|}}
-      {{> dashboard-postinfo post}}
-    {{/each}}
+{{> post-info post}}
 
-</section>
+{{#if loggedIn}}
+<div class="card m-5">
+    <h3 class="card-header"></h3>
+    <form class="card-body comment-form" id="comment-form">
+
+        <label class="form-label">Comment</label>
+        <input id="comment" name="comment-body" class="form-input" />
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
 {{/if}}
 
-<button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
+{{> comments post.comments}}
 
-<script src="/js/add-post.js"></script>
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
