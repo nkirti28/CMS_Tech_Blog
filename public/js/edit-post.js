@@ -1,5 +1,3 @@
-
-
 // edit post with new title and body
 const editFormHandler = async function (event) {
   event.preventDefault();
@@ -21,12 +19,7 @@ const editFormHandler = async function (event) {
     })
     .catch((err) => console.log(err));
 };
-
-
-
 // event handlers
-
 document
   .querySelector("#edit-post-form")
   .addEventListener("submit", editFormHandler);
-
